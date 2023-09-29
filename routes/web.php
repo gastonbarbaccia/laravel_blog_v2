@@ -28,10 +28,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 });
 
-Route::fallback(function () {
-    return redirect()->route('login');
-});
-
 Auth::routes();
 
 
